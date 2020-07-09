@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "asp-firebase-okta": {
+      "hosting": {
+        "app": [
+          "asp-firebase-okta"
+        ]
+      }
+    }
+  }
+}

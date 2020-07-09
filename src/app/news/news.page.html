@@ -4,6 +4,11 @@
   </ion-toolbar>
 </ion-header>
 <ion-content >
+  <ion-item>
+    <ion-input placeholder="search" (input)="onUpdateServerName($event)"></ion-input>
+    <ion-button color="primary"(click)='goSearch()'>Go</ion-button>
+  </ion-item>
+
   <ion-card *ngFor='let article of data?.articles' style="margin-top: 10px;">
     <ion-img [src]='article.urlToImage'></ion-img>
     <ion-card-header>

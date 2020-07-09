@@ -5,9 +5,19 @@
 export const environment = {
   production: false,
   api: {
-    url: 'http://newsapi.org/v2/',
-    key: '0db65eacb9504543a83fe63adf9ac6d2'
-  }
+    url: "http://newsapi.org/v2/",
+    key: "0db65eacb9504543a83fe63adf9ac6d2",
+  },
+  firebase: {
+    apiKey: "AIzaSyDeArSIYcb8Bdqt1mlB37gnj_SM9_e2Th4",
+    authDomain: "asp-firebase-okta.firebaseapp.com",
+    databaseURL: "https://asp-firebase-okta.firebaseio.com",
+    projectId: "asp-firebase-okta",
+    storageBucket: "asp-firebase-okta.appspot.com",
+    messagingSenderId: "113071257511",
+    appId: "1:113071257511:web:1735b3dd5570b884a7e882",
+    measurementId: "G-E353PGR6VF",
+  },
 };
 
 /*
