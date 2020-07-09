@@ -10,11 +10,14 @@ export class AuthService {
   constructor(public afAuth: AngularFireAuth) {}
   //this login would work too
   loginWithGoogle() {
-    return this.afAuth.signInWithPopup(new auth.GoogleAuthProvider());
+    return <toPromise>this.afAuth.signInWithPopup(new auth.GoogleAuthProvider());
   }
   signInWithGoogle() {
     console.log("Sign in with Google");
     return this.oauthSignIn(new auth.GoogleAuthProvider());
+  }
+  loggoutWithGoogle(){
+     return this.afAuth.signOut();
   }
 
   private oauthSignIn(provider: AuthProvider) {
@@ -25,9 +28,6 @@ export class AuthService {
         return this.afAuth
           .getRedirectResult()
           .then((result) => {
-            // This gives you an Access Token. You can use it to access the associated APIs.
-            //  let token = result.credential.accessToken;
-            // The signed-in user info.
             let user = result.user;
             console.log(user);
           })
